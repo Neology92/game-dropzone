@@ -22,13 +22,20 @@ func move_down(height: int, rows: int) -> void:
 	if row >= rows:
 		queue_free()
 	else:
-		position.y = row * height
+		var next_position = position
+		next_position.y = row * height
+		animate_move(next_position)
 
 
 func _on_body_shape_entered(_body_rid:RID, _body:Node2D, _body_shape_index:int, _local_shape_index:int) -> void:
 	if _body is Player:
 		_body.kill()  # Call the player's kill method
 
+
+func animate_move(_target_pos: Vector2) -> void:
+	var tween = create_tween()
+	tween.tween_property(self, "position", _target_pos, 0.05)
+	tween.set_ease(Tween.EASE_IN_OUT)
 
 
 func animate_bump() -> void:

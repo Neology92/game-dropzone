@@ -23,8 +23,9 @@ func _init() -> void:
 	else:
 		instance = self
 
-	add_child(game_timer)
+	music_player.bus = "music"  # Ensure this matches your audio bus setup
 	add_child(music_player)
+	add_child(game_timer)
 	load_block_textures()
 
 func _ready() -> void:

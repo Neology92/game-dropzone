@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cc56kgk4t0itt"]
+[gd_scene load_steps=3 format=3 uid="uid://cc56kgk4t0itt"]
 
+[ext_resource type="Script" uid="uid://cvxqtwxkt7etl" path="res://scripts/tracks_generator.gd" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dmq4keyemm3yi" path="res://scenes/track.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D"]
@@ -12,6 +13,7 @@ color = Color(0.302659, 0.000371521, 0.399456, 1)
 
 [node name="Tracks" type="Node2D" parent="."]
 position = Vector2(53, 0)
+script = ExtResource("1_yqjtg")
 
 [node name="Track" parent="Tracks" instance=ExtResource("3_lnu2h")]
 position = Vector2(277, 0)
