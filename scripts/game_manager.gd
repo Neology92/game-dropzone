@@ -4,6 +4,7 @@ var instance: GameManager
 
 var music_player: AudioStreamPlayer2D = preload("res://scenes/music_player.tscn").instantiate()
 
+var block_images: Array = []
 var tracks = []
 var player = preload("res://scenes/player.tscn").instantiate()
 
@@ -24,11 +25,14 @@ func _init() -> void:
 
 	add_child(game_timer)
 	add_child(music_player)
+	load_block_textures()
 
 func _ready() -> void:
-	add_child(player)
-	player.change_track()
+	get_tree().current_scene.add_child(player)
 	current_track_idx = randi() % tracks.size()
+	# for t in tracks:
+	# 	t.block_image = block_images.pick_random()
+	# 	block_images.erase(t.block_image)
 
 	move_blocks_down()
 	generate_blocks()
@@ -66,8 +70,19 @@ func generate_blocks() -> void:
 	_row[next_track_idx] = false 
 	for i in range(tracks.size()):
 		if _row[i]:
-			tracks[i].add_block()
+			var image = block_images.pick_random()
+			tracks[i].add_block(image)
 	
 	current_track_idx = next_track_idx
 
 	
+
+func load_block_textures() -> void:
+	var blocks_dir = DirAccess.open("res://assets/blocks")
+	if blocks_dir:
+		var files = blocks_dir.get_files()
+		for file in files:
+			if file.ends_with("square.png"):
+				var img = load("res://assets/blocks/" + file)
+				img.set("width", 108)
+				block_images.append(img)

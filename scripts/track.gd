@@ -23,8 +23,10 @@ func move_blocks_down() -> void:
 	# Move all blocks down by one row
 	for b in get_children():
 		if b is Block:
+			b.animate_bump()
 			b.move_down(block_height, blocks_in_col)
 
-func add_block() -> void:
+func add_block(_image: Resource) -> void:
 	var block = block_preset.instantiate()
+	block.img_resource = _image
 	add_child(block)

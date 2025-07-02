@@ -1,14 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc56kgk4t0itt"]
+[gd_scene load_steps=2 format=3 uid="uid://cc56kgk4t0itt"]
 
-[ext_resource type="PackedScene" uid="uid://cwn0lh0ar42f4" path="res://scenes/music_player.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dmq4keyemm3yi" path="res://scenes/track.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D"]
+position = Vector2(-1, 0)
 
 [node name="BG" type="ColorRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 647.0
-color = Color(0.359426, 0.000528716, 0.471587, 1)
+color = Color(0.302659, 0.000371521, 0.399456, 1)
 
 [node name="Tracks" type="Node2D" parent="."]
 position = Vector2(53, 0)
@@ -27,9 +27,6 @@ position = Vector2(641, -1)
 
 [node name="Track5" parent="Tracks" instance=ExtResource("3_lnu2h")]
 position = Vector2(760, -1)
-
-[node name="MusicPlayer" parent="." instance=ExtResource("2_yqjtg")]
-unique_name_in_owner = true
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
 current = true

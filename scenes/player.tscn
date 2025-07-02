@@ -13,10 +13,12 @@ floor_stop_on_slope = false
 floor_block_on_wall = false
 script = ExtResource("1_3vyb7")
 
-[node name="ColorRect" type="Sprite2D" parent="."]
-position = Vector2(0, 54)
-scale = Vector2(0.844, 0.844)
+[node name="Image" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-1, 54)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_g2els")
+flip_v = true
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
