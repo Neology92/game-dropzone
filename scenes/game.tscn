@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc56kgk4t0itt"]
+[gd_scene load_steps=2 format=3 uid="uid://cc56kgk4t0itt"]
 
 [ext_resource type="Script" uid="uid://cvxqtwxkt7etl" path="res://scripts/tracks_generator.gd" id="1_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://dmq4keyemm3yi" path="res://scenes/track.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D"]
-position = Vector2(-1, 0)
 
 [node name="BG" type="ColorRect" parent="."]
 offset_right = 1152.0
@@ -14,21 +12,6 @@ color = Color(0.302659, 0.000371521, 0.399456, 1)
 [node name="Tracks" type="Node2D" parent="."]
 position = Vector2(53, 0)
 script = ExtResource("1_yqjtg")
-
-[node name="Track" parent="Tracks" instance=ExtResource("3_lnu2h")]
-position = Vector2(277, 0)
-
-[node name="Track2" parent="Tracks" instance=ExtResource("3_lnu2h")]
-position = Vector2(400, 0)
-
-[node name="Track3" parent="Tracks" instance=ExtResource("3_lnu2h")]
-position = Vector2(521, 0)
-
-[node name="Track4" parent="Tracks" instance=ExtResource("3_lnu2h")]
-position = Vector2(641, -1)
-
-[node name="Track5" parent="Tracks" instance=ExtResource("3_lnu2h")]
-position = Vector2(760, -1)
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
 current = true

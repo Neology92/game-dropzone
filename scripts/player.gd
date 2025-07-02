@@ -15,7 +15,7 @@ var swish_sounds: Array = [
 func _ready() -> void:
 	@warning_ignore("integer_division")
 	track_idx = GameManager.instance.tracks.size() / 2
-	change_track()
+	change_track_immediately()
 	self.connect("ready", _on_ready)
 
 func _on_ready() -> void:
@@ -47,6 +47,12 @@ func change_track() -> void:
 	var target_track = GameManager.instance.tracks[track_idx]
 	var next_pos = target_track.player_slot.global_position
 	animate_move(next_pos)
+
+
+func change_track_immediately() -> void:
+	var target_track = GameManager.instance.tracks[track_idx]
+	var next_pos = target_track.player_slot.global_position
+	position = next_pos
 
 func kill() -> void:
 	print("Player killed")

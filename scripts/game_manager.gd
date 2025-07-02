@@ -29,12 +29,14 @@ func _init() -> void:
 	load_block_textures()
 
 func _ready() -> void:
+	player.position = Vector2(9999, 9999)
 	get_tree().current_scene.add_child(player)
 	current_track_idx = randi() % tracks.size()
-	# for t in tracks:
-	# 	t.block_image = block_images.pick_random()
-	# 	block_images.erase(t.block_image)
+	
+	self.connect("ready", _on_ready)
 
+
+func _on_ready() -> void:
 	move_blocks_down()
 	generate_blocks()
 	move_blocks_down()
