@@ -39,7 +39,3 @@ Available on itch.io:
 ## 📄 License
 
 MIT — fork it, remix it, enjoy it!
-
----
-
-Want a breakdown of the code structure or game loop? Just say the word.
