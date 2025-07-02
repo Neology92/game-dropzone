@@ -56,6 +56,9 @@ func change_track_immediately() -> void:
 
 func kill() -> void:
 	print("Player killed")
+	animate_bump()
+	await get_tree().create_timer(0.1).timeout
+	queue_free()
 	get_tree().quit()  
 
 
