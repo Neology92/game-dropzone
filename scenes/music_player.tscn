@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwn0lh0ar42f4"]
+
+[ext_resource type="AudioStream" uid="uid://qsfdu170rkih" path="res://assets/dark-techno-188507.mp3" id="1_jxdhu"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_jxdhu")

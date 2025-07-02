@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmq4keyemm3yi"]
+
+[ext_resource type="Script" uid="uid://ramusl084iln" path="res://scripts/track.gd" id="1_s1rm4"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s1rm4"]
+
+[node name="Track" type="Node2D" node_paths=PackedStringArray("player_slot")]
+script = ExtResource("1_s1rm4")
+player_slot = NodePath("PlayerSlot")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 324)
+scale = Vector2(108, 648)
+texture = SubResource("PlaceholderTexture2D_s1rm4")
+
+[node name="PlayerSlot" type="Node2D" parent="."]
+position = Vector2(0, 432)
