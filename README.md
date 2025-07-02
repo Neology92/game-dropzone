@@ -19,22 +19,17 @@ Your goal is to survive as long as possible by sliding left and right to avoid f
 - Simple but addictive gameplay
 - Beat-synced block drops (techno vibes 🎵)
 - Vibrant visuals with dynamic color patterns
-- Increasing difficulty over time
 
 ## 🛠️ Tech
 
 - Built with **Godot Engine**
 - Development time: ~**4 hours** (+ caffeine ☕)
-- Everything built on the fly, rhythm first
+- Everything built on the fly
 
 ## 📦 Play the game
 
 Available on itch.io:  
-👉 [itch.io_link_here](https://example.itch.io/dropzone)
-
-## 📸 Screenshots
-
-*(You can add gameplay screenshots here if you like)*
+👉 [Play here](https://neology92.itch.io/dropzone)
 
 ## 📄 License
 
